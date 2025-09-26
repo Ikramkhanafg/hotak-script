@@ -78,10 +78,11 @@ h2 {
 }
 
 .owner {
-  width: 100vw;
-  height: 100vw;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
 }
+
 
 
 
