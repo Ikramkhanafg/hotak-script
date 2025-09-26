@@ -77,6 +77,11 @@ h2 {
   text-align: center;
 }
 
+.owner {
+  width: 100vw;
+  height: 100vh;
+}
+
 @media (max-width: 500px) {
   .nav-links {
     display: none;
@@ -87,6 +92,7 @@ h2 {
     width: 150px;
   }
 }
+
 
 
 
