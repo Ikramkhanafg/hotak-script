@@ -1,0 +1,122 @@
+.lts {
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vid-tabs {
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.vid-tabs li a {
+    padding-left: 10%;
+    padding-right: 10%;
+    border: 2px solid white;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.vid-tabs li a:hover {
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.html1 {
+    float: left;
+    margin: 1.7vw;
+}
+
+.html2 {
+    float: left;
+    margin: 1.7vw;
+}
+
+.html3 {
+    float: left;
+    margin: 1.7vw;
+}
+
+.html4 {
+    float: left;
+    margin: 2vw;
+}
+
+.html5 {
+    float: left;
+    margin: 2vw;
+}
+
+.html6 {
+    float: left;
+    margin: 2vw;
+}
+
+.html7 {
+    float: left;
+    margin: 2vw;
+}
+
+.html8 {
+    float: left;
+    margin: 2vw;
+}
+
+.html9 {
+    float: left;
+    margin: 2vw;
+}
+
+.html10 {
+    float: left;
+    margin: 2vw;
+}
+
+.html11 {
+    float: left;
+    margin: 2vw;
+}
+
+.html12 {
+    float: left;
+    margin: 2vw;
+}
+
+.html13 {
+    float: left;
+    margin: 2vw;
+}
+
+.html14 {
+    float: left;
+    margin: 2vw;
+}
+
+.html15 {
+    float: left;
+    margin: 2vw;
+}
+
+.html16 {
+    float: left;
+    margin: 2vw;
+}
+
+.html17 {
+    float: left;
+    margin: 2vw;
+}
+
+.html18 {
+    float: left;
+    margin: 2vw;
+}

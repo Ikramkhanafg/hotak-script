@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos | Hotak Script</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/videos.css">
+</head>
+<body>
+  <!-- Same Navbar -->
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="logo">Hotak Script</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Videos Section -->
+  <div class="lts">
+    <h2>All Latest Videos</h2>
+  </div>
+  <div class="lts">
+    <p style="color: red;"> Click On Any One! </p>
+  </div>
+  <section class="content">
+
+    <ul class="vid-tabs" id="vidTabs">
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="python.html">Python</a></li>
+      <li><a href="networking.html">Networking</a></li>
+      <li><a href="ethical.html">Ethical Hacking</a></li>
+      <li><a href="cyber.html">Cyber Security</a></li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
+
