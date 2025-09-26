@@ -79,6 +79,8 @@ h2 {
 
 .owner {
   width: 100vw;
-  height: 70vh;
+  height: 100vw;
+  border-radius: 50%;
 }
+
 
