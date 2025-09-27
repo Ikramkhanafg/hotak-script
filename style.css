@@ -97,9 +97,10 @@ h2 {
     flex-direction: column;
     background: #333;
     position: absolute;
-    top: 60px;
+    top: 100px;
     right: 10px;
-    width: 150px;
+    width: 100vw;
+    height: 100vw;
     padding: 10px;
   }
 
@@ -109,4 +110,5 @@ h2 {
     height: 100vw;
    }
 }
+
 
