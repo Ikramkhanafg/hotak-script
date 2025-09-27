@@ -1,0 +1,33 @@
+.lts {
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vid-tabs {
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.vid-tabs li a {
+    padding-left: 10%;
+    padding-right: 10%;
+    border: 2px solid white;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.vid-tabs li a:hover {
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 2px solid black;
+    border-radius: 20px;
+}

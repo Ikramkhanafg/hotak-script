@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-top: 40px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.background {
+  background: url('cyber.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #222;
+  padding: 15px;
+  color: white;
+  width: 100vw;
+  top: 0px;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+  max-width: 100%;
+}
+
+.nav-links li a {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default, can be shown with JS for mobile */
+}
+
+.hero {
+  padding: 40px;
+  text-align: center;
+}
+
+.content {
+  padding: 3vw; /* view-port width */
+  text-align: center;
+}
+
+.owner {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 100%;
+    padding: 10px;
+    z-index: 999;
+  }
+  
+  .nav-links li a {
+    color: black;
+    font-size: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px;
+    color: white;
+    width: 100vw;
+  }
+  
+  .vid-tabs {
+    display: none;
+  }
+
+  .vid-tabs li a {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+} 
+  

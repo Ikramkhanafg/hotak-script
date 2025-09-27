@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Courses | Hotak Script </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="logo">Hotak Script</div>
+    <div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="content">
+    <h2>Available Courses</h2>
+    <ul>
+      <li>Cyber Security Basics</li>
+      <li>Ethical Hacking for Beginners</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>WordPress Web Design</li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
