@@ -52,6 +52,8 @@ h2 {
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2vw;
   max-width: 100%;
 }
@@ -110,6 +112,7 @@ h2 {
     height: 100vw;
    }
 }
+
 
 
 
