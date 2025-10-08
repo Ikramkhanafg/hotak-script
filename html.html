@@ -10,7 +10,6 @@
 <body>
   <!-- Same Navbar -->
   <nav class="navbar">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="logo">Hotak Script</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
@@ -20,16 +19,17 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
+  <br><br><br><br><br><br>
 
    <!-- Videos Section -->
-
   <div class="lts">
     <h2>HTML Latest Videos</h2>
   </div>
 
   <nav class="vidnavbar">
-    <ul class="vid-tabs" id="vidTabs">
+    <ul class="vid-links" id="vidLinks">
       <li><a href="html.html">HTML</a></li>
       <li><a href="css.html">CSS</a></li>
       <li><a href="javascript.html">JavaScript</a></li>
@@ -41,30 +41,28 @@
   <nav>
 
   <section class="content">
-
-    <div class="html1">
+    <div class="html1" id="html">
       <iframe width="270" height="190" src="https://www.youtube.com/embed/3vxHOiVSHVc?si=saSJzUWzAoIswCf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
       </iframe>
       <br>
-      <p> web development </p>
+      <p> Day-1 HTML toturail  </p>
     </div>
 
-    <div class="html2">
+    <div class="html2" id="html">
       <iframe width="270" height="190" src="https://www.youtube.com/embed/6kPLmqQ3XTM?si=oDWlyp8x78aR9-vR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
       </iframe>
       <br>
-      <p> web development </p>
+      <p> Day-2 HTML toturail </p>
     </div>
   
-    <div class="html3">
+    <div class="html3" id="html">
       <iframe width="270" height="190" src="https://www.youtube.com/embed/nbguHrabtQY?si=Gczav-Zvp6Ae4Wx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
       </iframe>
       <br>
-      <p> web development </p>
+      <p> Day-3 HTML toturail </p>
     </div>
-
   </section>
-
+  
   <script>
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("active");

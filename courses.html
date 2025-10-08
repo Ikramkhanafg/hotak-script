@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="logo">Hotak Script</div>
-    <div>
+
+  <!-- Header Start -->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navBar">
+      <div class="logo">Hotak Script</div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="videos.html">Videos</a></li>
@@ -19,23 +22,60 @@
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMenu()"> ☰ </div>
+    </nav>
+  </header>
+  <br><br><br><br><br><br>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Main Section -->
+    <div class="lts">
+      <h2>Available Courses</h2>
     </div>
-  </nav>
+    
+    <br>
+    <section class="courses-div">
+      <div class="about-courses">
+        <img class="course-img" src="cyber 2.png" alt="">
+        <br>
+        Cyber Security Basics
+      </div>
+      <br><br>
+      <div class="about-courses">
+        <img class="course-img" src="hacker.jpg" alt="">
+        <br>
+        Ethical Hacking
+      </div>
+      <br><br>
+      <div class="about-courses">
+        <img class="course-img" src="html-webpage-layout.png" alt="">
+        <br>
+        Web Development
+      </div>
+    </section>
+    <br><br>
+    <section class="courses-div">
+      <div class="about-courses">
+        <img class="course-img" src="html-webpage-layout.png" alt="">
+        <br>
+        <p> WordPress </p>
+      </div>
+    </section>
+  </main>
 
-  <section class="content">
-    <h2>Available Courses</h2>
-    <ul>
-      <li>Cyber Security Basics</li>
-      <li>Ethical Hacking for Beginners</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>WordPress Web Design</li>
-    </ul>
-  </section>
+  <!-- Footer Start -->
+  <footer>
 
-  <script>
+  </footer>
+
+</body>
+
+<!-- Script Section start -->
+<script>
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("active");
     }
   </script>
-</body>
 </html>

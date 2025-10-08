@@ -1,3 +1,9 @@
+/* 
+
+All Pages.css
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -9,28 +15,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-}
-
-h2 {
-  margin-top: 40px;
-  text-shadow: 1px 1px 2px #000;
-}
-
-.background {
-  background: url('cyber.jpg') no-repeat center center/cover;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
-
-.overlay {
-  position: absolute; 
-  top: 0;
-  left: 0; 
-  height: 100%;
-  width: 100%;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
+  background: white;
 }
 
 .navbar {
@@ -67,10 +52,81 @@ h2 {
   text-decoration: none;
 }
 
+.nav-links li a:hover {
+  color: blue;
+}
+
 .hamburger {
   font-size: 24px;
   cursor: pointer;
-  display: none; /* Hidden by default, can be shown with JS for mobile */
+  display: none;     /* Hidden by default, can be shown with JS for mobile */
+}
+
+.lts {
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+  margin-top: 40px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.vid-links {
+  width: 100%;
+  margin: auto;
+  list-style: none;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.vid-links li a {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.vid-links li a:hover {
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+/* 
+
+index.css
+
+*/
+
+.owner {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+}
+
+.background {
+  background: url('cyber.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
 }
 
 .hero {
@@ -78,15 +134,125 @@ h2 {
   text-align: center;
 }
 
+/* 
+
+videos.css
+
+*/
+
+.about-videos {
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+
+courses.css
+
+*/
+
+.courses-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2vw;
+  padding: 2vw;
+  background: whitesmoke;
+
+}
+
+.course-img {
+  width: 23vw;
+  height: 35vh;
+}
+
+.about-courses {
+  background: white;
+  width: 25vw;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 8px;
+} 
+
+.about-courses:hover {
+  box-shadow: 0 0 8px 1px black;
+}
+
 .content {
   padding: 3vw; /* view-port width */
   text-align: center;
 }
 
-.owner {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 50%;
+/* 
+
+certificates.css
+
+*/
+
+/* 
+
+about.css
+
+*/
+
+/* 
+
+contact.css
+
+*/
+
+.about-contact-links {
+  color: red;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+th {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+th a {
+  text-decoration: none;
+  color: black;
+}
+
+th a:hover {
+  animation: glowing 0.1s linear alternate infinite;
+}
+
+
+@keyframes glowing {
+  0% {
+    color: rgb(255, 0, 0);
+  }
+
+  100% {
+    color: blue;
+  }
+}
+
+/*
+
+html.css
+
+*/
+
+#html:hover {
+  box-shadow: 0 0 8px 2px green;
+  position: relative;
+  top: -10px;
+  animation: videos 5s linear;
 }
 
 @media (max-width: 768px) {
@@ -124,18 +290,23 @@ h2 {
     color: white;
     width: 100vw;
   }
-  
-  .vid-tabs {
-    display: none;
+
+  .vid-links {
+    flex-direction: column;
   }
 
-  .vid-tabs li a {
-    padding-left: 10%;
-    padding-right: 10%;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  .top-vid {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
+  .bottom-vid {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 } 
   
