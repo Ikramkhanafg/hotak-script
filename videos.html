@@ -1,64 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ur">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Videos | Hotak Script </title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="videos.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Hotak Script — Videos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header Start -->
-  <header>
-
-    <!-- Navbar -->
-    <nav class="navbar" id="navBar">
-      <div class="logo" id="logo"> Hotak Script </div>
-      <ul class="nav-links" id="navLinks">
-        <li> <a href="index.html"> Home </a> </li>
-        <li> <a href="videos.html"> Videos </a> </li>
-        <li> <a href="courses.html"> Courses </a> </li>
-        <li> <a href="certificates.html"> Certificates </a> </li>
-        <li> <a href="about.html"> About </a></li>
-        <li> <a href="contact.html"> Contact </a></li>
-      </ul>
-      <div class="hamburger" onclick="toggleMenu()"> ☰ </div>
+  <header class="header">
+    <div class="brand">
+        <div class="logo">HS</div>
+        <div>
+            <h1>Hotak Script</h1>
+            <p>Videos</p>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="videos.html">Videos</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <br><br><br><br><br><br>
 
-  <!-- Main Start -->
   <main>
-
-    <!-- About Videos Section -->
-    <div class="lts">
-      <h2>All Latest Videos</h2>
-    </div>
-    <div class="about-videos" id="aboutVideos">
-      <p style="color: red;"> The Follwings are Our Courses By Videos! </p>
-    </div>
-    
-    <!-- Videos Section -->
-    <ul class="vid-links" id="vidLinks">
-      <li><a href="html.html">HTML</a></li>
-      <li><a href="css.html">CSS</a></li>
-      <li><a href="javascript.html">JavaScript</a></li>
-      <li><a href="python.html">Python</a></li>
-      <li><a href="networking.html">Networking</a></li>
-      <li><a href="ethical.html">Ethical Hacking</a></li>
-      <li><a href="cyber.html">Cyber Security</a></li>
-    </ul>
+    <section class="section">
+      <h2 style="color:var(--neon)">Video Library</h2>
+      <p style="color:var(--muted)">Latest tutorials — embedded from YouTube.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+    </section>
   </main>
-  <br><br>
 
-  <!-- Footer Start -->
-  <footer>
-
-  </footer>
-</body>
-
-<!-- Script Section Start -->
-<script src="videos.js"></script>
-</html>
-
+  <footer class="footer">
+    <div>
+        &copy; 
+        <strong>
+            Hotak Script
+        </strong>
+        — All rights reserved 2025
+    </div>
+    <div>
+        <a style="color:var(--neon)" href="https://www.youtube.com/hotakscript" target="_blank" rel="noopener">
+            Subscribe on YouTube
+        </a>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body></html>

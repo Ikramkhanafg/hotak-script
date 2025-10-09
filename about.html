@@ -1,35 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Hotak Script</title>
-  <link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="ur">
+<head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>About — Hotak Script</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Hotak Script</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="certificates.html">Certificates</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </nav>
-  <br><br><br><br><br><br>
+  <header class="header">
+    <div class="brand">
+        <div class="logo">HS</div>
+        <div>
+            <h1>Hotak Script</h1>
+            <p>About</p>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="videos.html">Videos</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <section class="content">
-    <h2>About Hotak Script</h2>
-    <p>This website is dedicated to teaching Cyber Security, Ethical Hacking, and Networking in Urdu/Hindi.</p>
-  </section>
+  <main>
+    <section class="section">
+      <h2 style="color:var(--neon)"> Our goal </h2>
+      <p style="color:var(--muted)">
+        Hotak Script aims to give young people practical skills — gain competence in web development, networking, and cyber security.
+      </p>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-  </script>
+      <div style="margin-top:12px" class="grid">
+        <div class="course">
+            <h4>Mission</h4>
+            <p>To empower youth through science and technology for employment.</p>
+        </div>
+        <div class="course">
+            <h4>Vision</h4>
+            <p>To become the top tech academy in Pakistan that produces ethical hackers and developers.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+        &copy; 
+        <strong>
+            Hotak Script
+        </strong>
+        — All rights reserved 2025
+    </div>
+    <div style="color:var(--neon)">
+        Built with ❤
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

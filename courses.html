@@ -1,81 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ur">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Courses | Hotak Script </title>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotak Script — Courses</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header Start -->
-  <header>
-
-    <!-- Navbar -->
-    <nav class="navbar" id="navBar">
-      <div class="logo">Hotak Script</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="certificates.html">Certificates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="hamburger" onclick="toggleMenu()"> ☰ </div>
+  <!-- reuse header -->
+  <header class="header">
+    <div class="brand">
+        <div class="logo">HS</div>
+        <div>
+            <h1>Hotak Script</h1>
+            <p>Courses</p>
+        </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="videos.html">Videos</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <br><br><br><br><br><br>
 
-  <!-- Main -->
   <main>
-
-    <!-- Main Section -->
-    <div class="lts">
-      <h2>Available Courses</h2>
-    </div>
-    
-    <br>
-    <section class="courses-div">
-      <div class="about-courses">
-        <img class="course-img" src="cyber 2.png" alt="">
-        <br>
-        Cyber Security Basics
-      </div>
-      <br><br>
-      <div class="about-courses">
-        <img class="course-img" src="hacker.jpg" alt="">
-        <br>
-        Ethical Hacking
-      </div>
-      <br><br>
-      <div class="about-courses">
-        <img class="course-img" src="html-webpage-layout.png" alt="">
-        <br>
-        Web Development
-      </div>
-    </section>
-    <br><br>
-    <section class="courses-div">
-      <div class="about-courses">
-        <img class="course-img" src="html-webpage-layout.png" alt="">
-        <br>
-        <p> WordPress </p>
+    <section class="section">
+      <h2 style="color:var(--neon)">Courses</h2>
+      <p class="muted" style="color:var(--muted)"> Below are the different courses — each course includes video lectures, practical assignments, and a final certificate. </p>
+      <div class="grid" style="margin-top:14px">
+        <!-- each course links to its topic page -->
+        <a class="course" href="html.html">
+            <h4>HTML & CSS</h4>
+            <p> Web fundamentals — learning to create static websites. </p>
+        </a>
+        <a class="course" href="javascript.html">
+            <h4>JavaScript</h4>
+            <p>Interactive features، APIs and Projects۔</p>
+        </a>
+        <a class="course" href="python.html">
+            <h4>Python</h4>
+            <p>Programming fundamentals، automation and scripts.</p>
+        </a>
+        <a class="course" href="networking.html">
+            <h4>Networking</h4>
+            <p>Basic network concepts، TCP/IP، tools and practical labs.</p>
+        </a>
+        <a class="course" href="cyber-security.html">
+            <h4>Cyber Security</h4>
+            <p>Security fundamentals، threat analysis، defenses.</p>
+        </a>
+        <a class="course" href="ethical-hacking.html">
+            <h4>Ethical Hacking</h4>
+            <p>Penetration testing، tools، responsible disclosure.</p>
+        </a>
       </div>
     </section>
   </main>
 
-  <!-- Footer Start -->
-  <footer>
-
+  <footer class="footer">
+    <div>
+        &copy; 
+        <strong>
+            Hotak Script
+        </strong>
+        — All rights reserved 2025
+    </div>
+    <div style="color:var(--muted)">
+        Questions? 
+        <a style="color:var(--neon)" href="contact.html">
+            Contact us
+        </a>
+    </div>
   </footer>
-
+  <script src="script.js"></script>
 </body>
-
-<!-- Script Section start -->
-<script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-  </script>
 </html>

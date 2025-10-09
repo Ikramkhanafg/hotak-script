@@ -1,41 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ur">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Hotak Script</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotak Script — Home</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar" id="navBar">
-    <div class="logo" id="logo">Hotak Script</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="certificates.html">Certificates</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </nav>
-  
-  <div class="background" id="bakcGround">
-    <div class="overlay" id="overlay">
-      <br><br><br><br><br><br>
-      <section class="hero" id="hero">
-        <h1 class="welcome"> Welcome to Hotak Script </h1>
-        <p> Cyber Security | Hacking | Tutorials in Urdu/Hindi </p>
-      </section>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">HS</div>
+      <div>
+        <h1>Hotak Script</h1>
+        <p>Learn Ethical Hacking & Coding — Cyber Academy</p>
+      </div>
     </div>
-  </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="videos.html">Videos</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-  </script>
+  <main>
+    <section class="hero">
+      <div class="left">
+        <h2>Hotak Script ---
+            <span class="type-js"></span>
+        </h2>
+        <p> Here You Will Learn HTML, CSS, JavaScript, Python, Networking and Ethical Hacking. with Practical Projects and Certificates.</p>
+        <div class="cta">
+          <a class="btn" href="courses.html"> View Courses  </a>
+          <a class="btn secondary" href="videos.html"> Latest Videos </a>
+        </div>
+
+        <div class="section" style="margin-top:20px">
+          <h3 style="color:var(--neon)"> Popular Courses </h3>
+          <div class="grid" style="margin-top:12px">
+            <div class="course">
+              <h4> Basic HTML & CSS </h4>
+              <p> Basic fundamentals of web development in simple Urdu — with practical examples. </p>
+            </div>
+            <div class="course">
+              <h4>JavaScript and Frontend</h4>
+              <p> Make interactive web pages — Learn DOM, APIs, and project based </p>
+            </div>
+            <div class="course">
+              <h4>Python + Automation</h4>
+              <p> Create scripts, web scraping, and automation with Python. </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="card">
+        <h3>Quick Stats</h3>
+        <div class="stats">
+          <div class="stat"><span>1.2K</span><small> Students</small></div>
+          <div class="stat"><span>85</span><small> Courses</small></div>
+          <div class="stat"><span>240</span><small> Videos</small></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h3 style="color:var(--neon)">Latest Videos</h3>
+      <div class="grid" style="margin-top:12px">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="video" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID2" title="video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+        &copy; 
+        <strong>
+            Hotak Script
+        </strong>
+        — All rights reserved 2025
+    </div>
+    <div>
+        Follow:
+        <span style="color:var(--neon)">
+            <a style="color:var(--neon)" href="https://www.youtube.com/hotakscript" target="_blank" rel="noopener">
+                YouTube
+            </a>
+        </span>
+         • 
+        <span style="color:var(--neon)">
+            <a style="color:var(--neon)" href="https://github.com/hotakscript" target="_blank" rel="noopener">
+                GitHub
+            </a>
+        </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
