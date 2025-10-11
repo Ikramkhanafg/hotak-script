@@ -19,10 +19,6 @@
     padding: 0;
 }
 
-html,body {
-
-}
-
 body {
   font-family: 'Segoe UI', system-ui, 'Orbitron', Arial;
   background: radial-gradient(circle at 10% 10%, rgba(0,255,102,0.03), transparent 10%),
