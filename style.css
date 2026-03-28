@@ -12,6 +12,34 @@
     --white: #FFFFFF;
     --textColor: #333333;
     --lightText: #666666;
+    --surfaceColor: #FFFFFF;
+    --surfaceMuted: #F5F0E6;
+    --borderSoft: rgba(101, 67, 33, 0.14);
+    --shadowColor: rgba(0,0,0,0.12);
+    --headerControlBg: rgba(255,255,255,0.12);
+    --headerControlBorder: rgba(255,255,255,0.22);
+    --headingColor: #8B4513;
+    --cardTextColor: #333333;
+}
+
+body[data-theme="dark"] {
+    --primaryColor: #5a3823;
+    --secondaryColor: #9d6a3c;
+    --accentColor: #f1be72;
+    --lightWood: #725642;
+    --darkWood: #161311;
+    --beige: #211a16;
+    --white: #f7efe6;
+    --textColor: #f6eadb;
+    --lightText: #e7d2b5;
+    --surfaceColor: #2a211c;
+    --surfaceMuted: #382c24;
+    --borderSoft: rgba(241, 190, 114, 0.24);
+    --shadowColor: rgba(0,0,0,0.38);
+    --headerControlBg: rgba(255,255,255,0.1);
+    --headerControlBorder: rgba(255,255,255,0.18);
+    --headingColor: #fff3e4;
+    --cardTextColor: #f8ecde;
 }
 
 /* Global Styles */
@@ -28,6 +56,7 @@ body {
     background-color: var(--beige);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Container */
@@ -56,6 +85,10 @@ body {
     gap: 2rem;
 }
 
+.logo {
+    margin-right: auto;
+}
+
 .logo h1 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -78,10 +111,40 @@ body {
     color: var(--accentColor);
 }
 
+.themeToggle {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--headerControlBorder);
+    border-radius: 999px;
+    background-color: var(--headerControlBg);
+    color: var(--white);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.themeToggle:hover {
+    transform: translateY(-1px);
+    background-color: rgba(255,255,255,0.18);
+}
+
 .menuToggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    gap: 5px;
+    padding: 4px 0;
+}
+
+.menuToggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 999px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .navigation.active {
@@ -129,7 +192,7 @@ body {
 .heroContent h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
 }
 
 .heroContent p {
@@ -171,7 +234,7 @@ body {
 /* ===== Profile Section ===== */
 .profileSection {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--white), var(--beige));
+    background: linear-gradient(135deg, var(--surfaceColor), var(--beige));
 }
 
 .profileGrid {
@@ -205,7 +268,7 @@ body {
 
 .profileContent h3 {
     font-size: 2rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
     margin-bottom: 0.5rem;
 }
 
@@ -221,7 +284,7 @@ body {
 }
 
 .profileBio p {
-    color: var(--textColor);
+    color: var(--cardTextColor);
     margin-bottom: 1.5rem;
     line-height: 1.8;
     font-size: 1.05rem;
@@ -234,7 +297,7 @@ body {
 
 .profileList li {
     padding: 8px 0;
-    color: var(--primaryColor);
+    color: var(--cardTextColor);
     font-weight: 500;
     margin-left: 1rem;
 }
@@ -291,13 +354,13 @@ body {
 /* Services Section */
 .servicesSection {
     padding: 80px 0;
-    background-color: var(--white);
+    background-color: var(--surfaceColor);
 }
 
 .servicesSection h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -310,13 +373,17 @@ body {
 }
 
 .serviceCard {
-    background-color: var(--beige);
+    background-color: var(--surfaceMuted);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px var(--shadowColor);
     transition: all 0.3s ease;
     border: 2px solid transparent;
+}
+
+.serviceCard p {
+    color: var(--cardTextColor);
 }
 
 .serviceCard:hover {
@@ -333,7 +400,7 @@ body {
 
 .serviceCard h3 {
     margin-bottom: 1rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
 }
 
 /* Featured Work Section */
@@ -345,7 +412,7 @@ body {
 .featuredWorkSection h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
     font-size: 2rem;
 }
 
@@ -396,17 +463,57 @@ body {
 
 .socialLinks {
     margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .socialLinks a {
-    color: var(--accentColor);
-    margin: 0 1rem;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.socialLinks a:hover {
+.footerSocialCard {
+    min-width: 150px;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08);
     color: var(--white);
+}
+
+.footerSocialCard:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.footerSocialCard .socialMediaIcon {
+    background-color: var(--accentColor);
+    color: var(--darkWood);
+}
+
+body[data-theme="dark"] .heroSection {
+    background: linear-gradient(135deg, #4a392d, #211a16);
+}
+
+body[data-theme="dark"] .profileSection {
+    background: linear-gradient(135deg, #2b221d, #211a16);
+}
+
+body[data-theme="dark"] .serviceCard:hover,
+body[data-theme="dark"] .skillCard:hover {
+    background-color: #4a392d;
+}
+
+body[data-theme="dark"] .aboutText h3,
+body[data-theme="dark"] .aboutText p,
+body[data-theme="dark"] .formGroup label,
+body[data-theme="dark"] .infoItem,
+body[data-theme="dark"] .mapPlaceholder p,
+body[data-theme="dark"] .sectionSubtitle {
+    color: var(--cardTextColor);
+}
+
+body[data-theme="dark"] .projectOverlay {
+    background: rgba(18, 14, 12, 0.82);
 }
 
 /* About Page Styles */
@@ -419,7 +526,7 @@ body {
 
 .aboutContentSection {
     padding: 80px 0;
-    background-color: var(--white);
+    background-color: var(--surfaceColor);
 }
 
 .aboutGrid {
@@ -430,7 +537,7 @@ body {
 }
 
 .aboutText h3 {
-    color: var(--primaryColor);
+    color: var(--headingColor);
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
@@ -438,6 +545,7 @@ body {
 .aboutText p {
     margin-bottom: 1rem;
     line-height: 1.8;
+    color: var(--cardTextColor);
 }
 
 .aboutImage img {
@@ -455,7 +563,7 @@ body {
 .skillsSection h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
     font-size: 2rem;
 }
 
@@ -466,11 +574,11 @@ body {
 }
 
 .skillCard {
-    background-color: var(--white);
+    background-color: var(--surfaceColor);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px var(--shadowColor);
     transition: all 0.3s ease;
 }
 
@@ -487,7 +595,11 @@ body {
 
 .skillCard h3 {
     margin-bottom: 1rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
+}
+
+.skillCard p {
+    color: var(--cardTextColor);
 }
 
 /* Contact Page Styles */
@@ -500,7 +612,7 @@ body {
 
 .contactContentSection {
     padding: 80px 0;
-    background-color: var(--white);
+    background-color: var(--surfaceColor);
 }
 
 .contactGrid {
@@ -511,7 +623,7 @@ body {
 
 .contactForm h3,
 .contactInfo h3 {
-    color: var(--primaryColor);
+    color: var(--headingColor);
     margin-bottom: 2rem;
 }
 
@@ -534,6 +646,8 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
+    background-color: var(--surfaceMuted);
+    color: var(--textColor);
 }
 
 .formGroup input:focus,
@@ -551,23 +665,71 @@ body {
 .infoIcon {
     font-size: 1.5rem;
     margin-right: 1rem;
-    color: var(--primaryColor);
+    color: var(--accentColor);
 }
 
 .infoItem strong {
-    color: var(--primaryColor);
+    color: var(--headingColor);
+}
+
+.socialMediaBlock {
+    margin-top: 2.5rem;
+}
+
+.socialMediaGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.socialMediaCard {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+    background-color: var(--beige);
+    color: var(--cardTextColor);
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.socialMediaCard:hover {
+    transform: translateY(-3px);
+    border-color: var(--accentColor);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.socialMediaIcon {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.socialMediaIcon i {
+    font-size: 1.1rem;
+    line-height: 1;
 }
 
 /* Map Section */
 .mapSection {
     padding: 80px 0;
-    background-color: var(--beige);
+    background-color: var(--surfaceMuted);
 }
 
 .mapSection h3 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
 }
 
 .mapPlaceholder {
@@ -585,10 +747,15 @@ body {
 @media (max-width: 768px) {
     .navigation {
         display: none;
+        width: 100%;
     }
     
     .menuToggle {
         display: flex;
+    }
+
+    .themeToggle {
+        order: 2;
     }
     
     .heroSection .container {
@@ -617,6 +784,19 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .navigation.active a {
+        display: block;
+        padding: 0.5rem 1.25rem;
+    }
+
+    .socialMediaGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .footerSocialCard {
+        width: 100%;
     }
     
     .profilePlaceholder {
@@ -648,7 +828,7 @@ body {
 
 .projectsGridSection {
     padding: 80px 0;
-    background-color: var(--white);
+    background-color: var(--surfaceColor);
 }
 
 .projectsGrid {
@@ -736,7 +916,7 @@ body {
 .featuredWorkSection h2 {
     text-align: center;
     font-size: 2rem;
-    color: var(--primaryColor);
+    color: var(--headingColor);
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
