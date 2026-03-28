@@ -1,119 +1,116 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ur">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Contact — Hotak Script</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ehsanullah Carpenter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="brand">
-        <div class="logo">HS</div>
-        <div>
-            <h1>Hotak Script</h1>
-            <p>Contact</p>
+    <!-- Header Section -->
+    <header class="headerSection">
+        <div class="container">
+            <div class="logo">
+                <h1>Ehsanullah Carpenter</h1>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menuToggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
-    <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="videos.html">Videos</a>
-        <a href="certificate.html">Certificate</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <button class="hamburger"> ☰ </button>
-    <nav class="mobile-nav">
-      <a href="index.html">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="videos.html">Videos</a>
-      <a href="certificate.html">Certificate</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    </header>
 
-  <main>
-    <section class="section">
-        <h2 style="color:var(--neon)">Contact Information</h2>
-        <p>YouTube:
-            <a style="color:var(--neon);" href="https://www.youtube.com/hotakscript" target="_blank" rel="noopener">
-                Hotak Script
-            </a>
-        </p>
-        <p>Email:
-            <a style="color:var(--neon);" href="mailto:hotakscript@gmail.com">
-                hotakscript@gmail.com
-            </a>
-        </p>
-        <p>Phone: +92325-3808250</p>
-        <p>Address: Shop# S13 Makkah Mall Nawa Killi, Quetta, Balochistan, Pakistan</p>
+    <!-- Contact Hero Section -->
+    <section class="contactHeroSection">
+        <div class="container">
+            <h2>Humse Contact Karein</h2>
+            <p>Apni furniture ki zaroorat batayein, hum help karenge</p>
+        </div>
     </section>
-    <section class="section">
-        <h2 style="color:var(--neon)">Get in Touch</h2>
-        <p style="color:var(--muted)">
-            Feel free to reach out for inquiries, support, or collaboration opportunities. We're here to help!
-        </p>
-        <p style="color:var(--muted)">
-            For any questions or feedback, please email us at
-            <a style="color:var(--neon);" href="mailto:hotakscript@gmail.com">
-                hotakscript@gmail.com
-            </a>
-        </p>
-        <p style="color:var(--muted)">
-            You can also reach us on our social media channels:
-        </p>
-        <ul style="color:var(--muted);margin-top:8px;list-style-type:none;padding:0;display:flex;gap:10px">
-            <li>
-                <a style="color:var(--neon);" href="https://www.facebook.com/hotakscript" target="_blank" rel="noopener">Facebook</a>
-            </li>
-            <li>
-                <a style="color:var(--neon);" href="https://twitter.com/hotakscript" target="_blank" rel="noopener">Twitter</a>
-            </li>
-            <li>
-                <a style="color:var(--neon);" href="https://www.instagram.com/hotakscript" target="_blank" rel="noopener">Instagram</a>
-            </li>
-            <li>
-                <a style="color:var(--neon);" href="https://www.linkedin.com/company/hotakscript" target="_blank" rel="noopener">LinkedIn</a>
-            </li>
-            <li>
-                <a style="color:var(--neon);" href="https://www.youtube.com/hotakscript" target="_blank" rel="noopener">YouTube</a>
-            </li>
-        </ul>
 
+    <!-- Contact Content Section -->
+    <section class="contactContentSection">
+        <div class="container">
+            <div class="contactGrid">
+                <div class="contactForm">
+                    <h3>Message Bhejein</h3>
+                    <form id="contactForm">
+                        <div class="formGroup">
+                            <label for="name">Apka Naam</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="formGroup">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="formGroup">
+                            <label for="message">Apka Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="ctaButton">Message Bhejein</button>
+                    </form>
+                </div>
+                <div class="contactInfo">
+                    <h3>Contact Information</h3>
+                    <div class="infoItem">
+                        <div class="infoIcon">📞</div>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +92-300-1234567
+                        </div>
+                    </div>
+                    <div class="infoItem">
+                        <div class="infoIcon">📍</div>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Shop # 5, Main Market, City Center, Lahore, Pakistan
+                        </div>
+                    </div>
+                    <div class="infoItem">
+                        <div class="infoIcon">🕒</div>
+                        <div>
+                            <strong>Working Hours:</strong><br>
+                            Monday - Saturday: 9 AM - 6 PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- <section class="section">
-      <h2 style="color:var(--neon)">Contact Us</h2>
-      <p style="color:var(--muted)"> Contact us — fill out the form below. </p>
 
-      <div style="margin-top:12px;max-width:760px">
-        <form  id="contactForm">
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <input required placeholder="Name" style="flex:1;padding:10px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:inherit">
-            <input required placeholder="Email" type="email" style="flex:1;padding:10px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:inherit">
-          </div>
-          <textarea required placeholder="Message" style="width:100%;margin-top:10px;padding:12px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:inherit"></textarea>
-          <button class="btn" style="margin-top:10px">Send Message</button>
-        </form>
-      </div>
-    </section> -->
-  </main>
+    <!-- Map Section -->
+    <section class="mapSection">
+        <div class="container">
+            <h3>Hamara Location</h3>
+            <div class="mapPlaceholder">
+                <p>Map yahan show hogi (Google Maps integration)</p>
+                <div class="mapImage">
+                    <img src="https://via.placeholder.com/800x400/8B4513/FFFFFF?text=Map+Location" alt="Location Map">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <div>
-        &copy; 
-        <strong>
-            Hotak Script
-        </strong>
-        — All rights reserved 2025
-    </div>
-    <div style="color:var(--muted)">
-        Questions? 
-        <a style="color:var(--neon)" href="contact.html">
-            Contact us
-        </a>
-    </div>
-</footer>
-  <script src="script.js"></script>
-</body></html>
+    <!-- Footer -->
+    <footer class="footerSection">
+        <div class="container">
+            <p>&copy; 2024 Ehsanullah Carpenter. All rights reserved.</p>
+            <div class="socialLinks">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

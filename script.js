@@ -1,114 +1,92 @@
-// script.js - Hotak Script interactions (typing, contact demo, hamburger, matrix)
+// Ehsanullah Carpenter - JavaScript File
+// Yeh script mobile menu aur contact form ke liye hai
 
-/* Typing effect (hero) */
-document.addEventListener('DOMContentLoaded',()=>{
-  const el = document.querySelector('.type-js');
-  if(el){
-    const phrases = ['Learn Ethical Hacking','Build Projects','Get Certified','Join Hotak Community'];
-    let i=0, j=0, forward=true;
-    setInterval(()=>{
-      const p = phrases[i];
-      el.textContent = p.slice(0,j) + (Date.now()%2? '|' : ' ');
-      if(forward){
-        j++; 
-        if(j>p.length) {
-          forward=false;
-          setTimeout(() => {},100)
-        }
-      } else {
-        j--; 
-        if(j===0) {
-          forward=true;
-          i=(i+1)%phrases.length
-        }
-      }
-    },120);
-  }
-
-  /* contact form demo */
-  const f = document.querySelector('#contactForm');
-  if(f) {
-    f.addEventListener('submit', e=>{
-      e.preventDefault();
-      alert('Submited');
-      f.reset();
+// DOM content load hone ka wait karo
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle functionality
+    const menuToggle = document.getElementById('menuToggle');
+    const navigation = document.querySelector('.navigation');
+    
+    if (menuToggle && navigation) {
+        menuToggle.addEventListener('click', function() {
+            navigation.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    }
+    
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Form submit hone se roko
+            
+            // Form data collect karo
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (name && email && message) {
+                // Yahan real mein email send kar sakte hain
+                // Abhi ke liye alert show karo
+                alert(`Thank you ${name}! Aapka message receive ho gaya hai. Hum jaldi contact karenge.`);
+                
+                // Form clear karo
+                contactForm.reset();
+            } else {
+                alert('Please saare fields fill karein.');
+            }
+        });
+    }
+    
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.navigation a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Mobile menu close karo
+            if (navigation.classList.contains('active')) {
+                navigation.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
     });
-  }
-
-  /* mobile hamburger menu toggle */
-  const ham = document.querySelector('.hamburger');
-  const mnav = document.querySelector('.mobile-nav');
-  if(ham && mnav) {
-    ham.addEventListener('click', () => {
-      const visible = mnav.style.display === 'block';
-      mnav.style.display = visible ? 'none' : 'block';
+    
+    // Image zoom effect on hover (extra animation)
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        
+        img.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
     });
-
-    // hide on click outside
-    document.addEventListener('click', (ev) => {
-      if(!ev.target.closest('.hamburger') && !ev.target.closest('.mobile-nav')){
-        if(mnav) mnav.style.display = 'none';
-      }
+    
+    // Service cards par wood polish effect
+    const serviceCards = document.querySelectorAll('.serviceCard');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = 'var(--lightWood)';
+            this.style.borderColor = 'var(--accentColor)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = 'var(--beige)';
+            this.style.borderColor = 'transparent';
+        });
     });
-  }
 });
 
-/* Matrix background animation */
-(function() {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'matrix';
-  document.body.prepend(canvas);
-  const ctx = canvas.getContext('2d');
-  let width,height;
-  const letters = '01\u30A0\u30A1\u30A2\u30A3\u30A4\u30A5\u30A6\u30A7\u30A8\u30A9\u30AA\u30AB\u30AD\u30AE';
-  let fontSize = 14;
-  let columns;
-  let drops;
-
-  function init() {
-    resize();
-    window.addEventListener('resize', resize);
-    for(let i=0;i<columns;i++) drops[i]=1;
-    loop();
-  }
-
-  function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    fontSize = Math.max(12, Math.min(18, Math.floor(width/120)));
-    columns = Math.floor(width / fontSize);
-    drops = new Array(columns).fill(1);
-    ctx.font = fontSize + 'px monospace';
-  }
-  function loop() {
-    ctx.fillStyle = 'rgba(2,6,6,0.06)';
-    ctx.fillRect(0,0,width,height);
-    ctx.fillStyle = 'rgba(0,255,102,0.18)';
-    ctx.shadowColor = 'rgba(0,255,102,0.25)';
-    ctx.shadowBlur = 6;
-    for(let i=0;i<columns;i++) {
-      const text = letters.charAt(Math.floor(Math.random()*letters.length));
-      ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-      if(drops[i]*fontSize > height && Math.random() > 0.975) drops[i]=0;
-      drops[i]++;
+// Window resize par mobile menu handle karo
+window.addEventListener('resize', function() {
+    const navigation = document.querySelector('.navigation');
+    const menuToggle = document.getElementById('menuToggle');
+    
+    if (window.innerWidth > 768) {
+        // Desktop par menu hamesha show karo
+        if (navigation) navigation.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
     }
-    requestAnimationFrame(loop);
-  } init();
-})();
-
-// const courseLinks = document.getElementsByClassName('course');
-// const heading = courseLinks.querySelector('h4');
-// const para = courseLinks.querySelector('p');
-
-// // Mouse hover (mouseenter)
-// courseLinks.addEventListener('mouseenter', () => {
-//   courseLinks.style.background = 'linear-gradient(90deg, var(--neon), var(--neon-2))';
-//   heading.style.color = '#001409';
-//   para.style.color = '#001409';
-// });
-
-// courseLinks.addEventListener('mouseleave', () => {
-//   courseLinks.style.background = '';
-//   heading.style.color = '';
-//   para.style.color = '';
-// });
+});

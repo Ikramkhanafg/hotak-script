@@ -1,126 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hotak Script — Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehsan Ullah Carpenter - Professional Furniture Maker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="brand">
-      <div class="logo">HS</div>
-      <div>
-        <h1>Hotak Script</h1>
-        <p>Learn Ethical Hacking & Coding — Cyber Academy</p>
-      </div>
-    </div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="videos.html">Videos</a>
-      <a href="certificate.html">Certificate</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button class="hamburger"> ☰ </button>
-    <nav class="mobile-nav">
-      <a href="index.html">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="videos.html">Videos</a>
-      <a href="certificate.html">Certificate</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-    <main>
-      <section class="hero">
-        <div class="left">
-          <h2>Hotak Script -
-            <span style="font-size: 20px;" class="type-js"></span>
-          </h2>
-          <p> Here You Will Learn HTML, CSS, JavaScript, Python, Networking and Ethical Hacking. with Practical Projects and Certificates.</p>
-          <br>
-          <div class="cta">
-            <a class="btn" href="courses.html"> View Courses  </a>
-            <a class="btn secondary" href="videos.html"> Latest Videos </a>
-          </div>
-
-          <div class="section" style="margin-top:20px">
-            <h3 style="color:var(--neon)"> Popular Courses </h3>
-            <div class="grid" style="margin-top:12px">
-              <div class="course">
-                <h4> Basic HTML & CSS </h4>
-                <p> Basic fundamentals of web development in simple Urdu — with practical examples. </p>
-              </div>
-              <div class="course">
-                <h4>JavaScript and Frontend</h4>
-                <p> Make interactive web pages — Learn DOM, APIs, and project based </p>
-              </div>
-              <div class="course">
-                <h4>Python + Automation</h4>
-                <p> Create scripts, web scraping, and automation with Python. </p>
-              </div>
+    <!-- Header Section -->
+    <header class="headerSection">
+        <div class="container">
+            <div class="logo">
+                <h1>Ehsanullah Carpenter</h1>
             </div>
-          </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menuToggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+    </header>
 
-      <aside class="card">
-        <h3>Quick Stats</h3>
-        <div class="stats">
-          <div class="stat">
-            <span>1.2K</span>
-            <small> Students</small>
-          </div>
-          <div class="stat">
-            <span>10+</span>
-            <small> Courses</small>
-          </div>
-          <div class="stat">
-            <span>240</span>
-            <small> Videos</small>
-          </div>
+    <!-- Hero Section -->
+    <section class="heroSection">
+        <div class="container">
+            <div class="heroContent">
+                <h2>Professional Furniture Banane Ka Hunar</h2>
+                <p>Hum apko quality furniture, doors aur cabinets provide karte hain. Har piece craftsmanship ka nateeja hai.</p>
+                <a href="contact.html" class="ctaButton">Abhi Contact Karein</a>
+            </div>
+            <div class="heroImage">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="woodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="400" height="300" fill="#F5F5DC"/>
+                    <!-- Furniture Table -->
+                    <rect x="80" y="180" width="240" height="20" fill="url(#woodGradient)" rx="3"/>
+                    <rect x="100" y="200" width="15" height="80" fill="#8B4513" rx="3"/>
+                    <rect x="285" y="200" width="15" height="80" fill="#8B4513" rx="3"/>
+                    <!-- Decorative elements -->
+                    <circle cx="200" cy="120" r="40" fill="#D2691E" opacity="0.3"/>
+                    <circle cx="200" cy="120" r="30" fill="#CD853F" opacity="0.5"/>
+                    <text x="200" y="130" font-family="Arial" font-size="18" fill="#8B4513" text-anchor="middle" font-weight="bold">Premium</text>
+                    <text x="200" y="150" font-family="Arial" font-size="14" fill="#654321" text-anchor="middle">Furniture</text>
+                </svg>
+            </div>
         </div>
-      </aside>
     </section>
 
-    <!-- <section class="section">
-      <h3 style="color:var(--neon)">Latest Videos</h3>
-      <div class="grid" style="margin-top:12px">
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="video" frameborder="0" allowfullscreen></iframe>
+    <!-- Personal Profile Section -->
+    <section class="profileSection">
+        <div class="container">
+            <div class="profileGrid">
+                <div class="profileImage">
+                    <div class="profilePlaceholder">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background -->
+                            <circle cx="100" cy="100" r="100" fill="#8B4513" opacity="0.1"/>
+                            <!-- Head -->
+                            <circle cx="100" cy="70" r="30" fill="#D2691E"/>
+                            <!-- Body/Shoulders -->
+                            <path d="M 70 100 Q 100 110 130 100 L 130 160 Q 100 170 70 160 Z" fill="#CD853F"/>
+                            <!-- Professional look -->
+                            <circle cx="100" cy="70" r="28" fill="none" stroke="#8B4513" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="profileContent">
+                    <h3>Ehsanullah Carpenter</h3>
+                    <p class="designation">Professional Furniture & Carpentry Expert</p>
+                    <div class="profileBio">
+                        <p>Mera naam Ehsanullah hai aur main ek professional carpenter hoon. 15+ saal ka experience hai furniture aur interior design mein. Main apni craftmanship se customers ko best quality furniture provide karta hoon.</p>
+                        <ul class="profileList">
+                            <li>✓ Custom Furniture Design</li>
+                            <li>✓ Professional Installation</li>
+                            <li>✓ Quality Guaranteed</li>
+                            <li>✓ Affordable Pricing</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="ctaButton">Ab Contact Karen</a>
+                </div>
+            </div>
         </div>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID2" title="video" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Services Section -->
+    <section class="servicesSection">
+        <div class="container">
+            <h2>Hamare Services</h2>
+            <div class="servicesGrid">
+                <div class="serviceCard">
+                    <div class="serviceIcon">🪑</div>
+                    <h3>Custom Furniture</h3>
+                    <p>Har tarah ki custom furniture banate hain - beds, tables, chairs, aur zyada.</p>
+                </div>
+                <div class="serviceCard">
+                    <div class="serviceIcon">🚪</div>
+                    <h3>Doors</h3>
+                    <p>Wooden doors, main doors, interior doors - sab quality ke saath.</p>
+                </div>
+                <div class="serviceCard">
+                    <div class="serviceIcon">🗄️</div>
+                    <h3>Cabinets</h3>
+                    <p>Kitchen cabinets, wardrobes, storage solutions - space ko efficiently use karne ke liye.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section> -->
-  </main>
+    </section>
 
-  <footer class="footer">
-    <div>
-        &copy; 
-        <strong>
-            Hotak Script
-        </strong>
-        — All rights reserved 2025
-    </div>
-    <div>
-        Follow:
-        <span style="color:var(--neon)">
-            <a style="color:var(--neon)" href="https://www.youtube.com/hotakscript" target="_blank" rel="noopener">
-                YouTube
-            </a>
-        </span>
-         • 
-        <span style="color:var(--neon)">
-            <a style="color:var(--neon)" href="https://github.com/hotakscript" target="_blank" rel="noopener">
-                GitHub
-            </a>
-        </span>
-    </div>
-  </footer>
+    <!-- Featured Work Section -->
+    <section class="featuredWorkSection">
+        <div class="container">
+            <h2>Hamara Best Projects</h2>
+            <p class="sectionSubtitle">Dekhen hamari handcraft furniture ki quality aur design</p>
+            <div class="workGallery">
+                <div class="workItem">
+                    <div class="projectPlaceholder projectType1">Dining Table</div>
+                    <div class="workItemLabel">Dining Table</div>
+                </div>
+                <div class="workItem">
+                    <div class="projectPlaceholder projectType2">Kitchen Set</div>
+                    <div class="workItemLabel">Kitchen Set</div>
+                </div>
+                <div class="workItem">
+                    <div class="projectPlaceholder projectType3">Bedroom Suite</div>
+                    <div class="workItemLabel">Bedroom Suite</div>
+                </div>
+                <div class="workItem">
+                    <div class="projectPlaceholder projectType4">Office Desk</div>
+                    <div class="workItemLabel">Office Desk</div>
+                </div>
+            </div>
+            <div class="projectsButtonContainer">
+                <a href="projects.html" class="ctaButton">Saari Projects Dekhen</a>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Call to Action Section -->
+    <section class="ctaSection">
+        <div class="container">
+            <h2>Apka Project Shuru Karen?</h2>
+            <p>Humse contact karein aur apni furniture ki zaroorat batayein.</p>
+            <a href="contact.html" class="ctaButton">Contact Form Bharain</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footerSection">
+        <div class="container">
+            <p>&copy; 2024 Ehsanullah Carpenter. All rights reserved.</p>
+            <div class="socialLinks">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
